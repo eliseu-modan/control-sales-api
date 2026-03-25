@@ -5,7 +5,7 @@ const registerController = require("../controllers/Register.js");
 const { isAdmin } = require("../services/authAdmin.js");
 
 userRoutes.post("/auth/login", userController.login);
-userRoutes.post("/auth/register", isAdmin, registerController.register);
+userRoutes.post("/auth/register",  registerController.register);
 userRoutes.get("/auth/getUsers", isAdmin, registerController.getUsers);
 userRoutes.delete(
   "/auth/deleteUser/:card",

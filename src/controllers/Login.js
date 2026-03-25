@@ -29,7 +29,8 @@ const login = async (req, res) => {
   try {
     const { email, password } = req.body;
     const value = { email, password };
-
+     console.log(email, password);
+     
     const verifyUser = await prisma.createUser.findUnique({
       where: {
         email,
